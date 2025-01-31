@@ -24,6 +24,13 @@ Check out these guides to get started:
 
 👉 [Fine-tune Flux with an API](https://replicate.com/blog/fine-tune-flux-with-an-api)
 
+## Getting Started on a Remote instance like AWS.
+Install Cog: https://github.com/replicate/cog
+Creating an ssh keypair for the instance saving inside of the users Github Profile. In order to properly checkout the code. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html
+git clone --recurse-submodules git@github.com:replicate/flux-fine-tuner.git
+cog build -t ${your_model_name} - https://replicate.com/docs/guides/model-best-practices
+cog train -i input_images=@${path_to_local_images}.zip
+
 ## Contributing
 
 If you're here to help improve [the trainer that Replicate uses to fine-tune Flux models](https://replicate.com/ostris/flux-dev-lora-trainer), you've come to the right place.
